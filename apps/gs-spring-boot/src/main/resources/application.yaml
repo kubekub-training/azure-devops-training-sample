@@ -1,0 +1,7 @@
+azure:
+  application-insights:
+    instrumentation-key: ${instrumentation-key}
+# Specify the name of your springboot application. This can be any logical name you would like to give to your app.
+spring:
+  application:
+    name: gs-spring-boot

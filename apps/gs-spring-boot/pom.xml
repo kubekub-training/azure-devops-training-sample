@@ -24,6 +24,11 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!-- end::actuator[] -->
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>applicationinsights-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency>
         <!-- tag::tests[] -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
