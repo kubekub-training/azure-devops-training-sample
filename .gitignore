@@ -1,3 +1,9 @@
 .history
 target
 *.class
+.settings
+.classpath
+.project
+.gradle
+terraform-*
+.terraform
