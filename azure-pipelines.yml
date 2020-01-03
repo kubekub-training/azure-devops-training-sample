@@ -19,6 +19,7 @@ variables:
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
+  workingDirectory: apps/gs-spring-boot
 
 stages:
 - stage: Build
@@ -34,11 +35,13 @@ stages:
       displayName: 'Maven Package'
       inputs:
         mavenPomFile: 'pom.xml'
+        workingDirectory: ${workingDirectory}
+
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory)'
+        SourceFolder: '${workingDirectory}'
         Contents: '**/target/*.?(war|jar)'
         TargetFolder: $(Build.ArtifactStagingDirectory)
 
