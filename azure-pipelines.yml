@@ -33,7 +33,7 @@ stages:
     steps:
     - task: Maven@3
       inputs:
-        mavenPomFile: '$(system.defaultWorkingDirectory)/${workingDirectory}/pom.xml'
+        mavenPomFile: '$(system.defaultWorkingDirectory)/apps/gs-spring-boot/pom.xml'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
         codeCoverageToolOption: 'JaCoCo'
@@ -47,13 +47,13 @@ stages:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
-        mavenPomFile: '$(system.defaultWorkingDirectory)/${workingDirectory}/pom.xml'
+        mavenPomFile: '$(system.defaultWorkingDirectory)/apps/gs-spring-boot/pom.xml'
 
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
-        SourceFolder: '${workingDirectory}'
+        SourceFolder: 'apps/gs-spring-boot'
         Contents: '**/target/*.?(war|jar)'
         TargetFolder: $(Build.ArtifactStagingDirectory)
 
