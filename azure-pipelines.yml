@@ -19,7 +19,7 @@ variables:
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  workingDirectory: apps/gs-spring-boot
+  workingDirectory: 'apps/gs-spring-boot'
 
 stages:
 - stage: Build
