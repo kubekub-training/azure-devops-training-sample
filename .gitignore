@@ -7,3 +7,6 @@ target
 .gradle
 terraform-*
 .terraform
+terraform.tfstate*
+*.out
+.terraform*.lock
