@@ -49,12 +49,6 @@ stages:
       inputs:
         mavenPomFile: '$(system.defaultWorkingDirectory)/apps/gs-spring-boot/pom.xml'
 
-    - task: Maven@3
-      inputs:
-        mavenPomFile: '$(system.defaultWorkingDirectory)/apps/gs-spring-boot/pom.xml'
-        goals: 'deploy'
-        mavenAuthenticateFeed: true
-
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
