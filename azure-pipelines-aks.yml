@@ -92,6 +92,7 @@ trigger:
           useClusterAdmin: true
           namespace: 'devops-training'
           command: 'upgrade'
+          arguments: '--install'
           chartType: 'FilePath'
           chartPath: 'helm/springboot'
           releaseName: 'exampleapp'
